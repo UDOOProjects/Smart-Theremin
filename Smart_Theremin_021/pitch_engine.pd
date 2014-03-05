@@ -1,0 +1,15 @@
+#N canvas 39 785 450 300 10;
+#X obj 101 101 cnv 15 320 60 empty empty pitch_engine 20 12 0 14 -233017
+-66577 0;
+#X floatatom 343 135 5 0 0 0 midi_num - -, f 5;
+#X floatatom 177 135 5 0 0 0 freq_num - -, f 5;
+#X obj 215 69 two_octaves_021;
+#X obj 379 20 inlet;
+#X obj 90 23 inlet;
+#X obj 348 182 s mid;
+#X connect 1 0 6 0;
+#X connect 3 0 2 0;
+#X connect 3 1 1 0;
+#X connect 4 0 3 1;
+#X connect 5 0 3 0;
+#X coords 0 -1 1 1 320 60 1 100 100;

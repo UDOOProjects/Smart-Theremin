@@ -1,0 +1,40 @@
+#N canvas 265 467 423 371 10;
+#X obj 101 101 cnv 15 200 150 empty empty player 20 12 0 14 -260097
+-66577 0;
+#X obj 176 290 sp_engine;
+#X obj 117 135 bng 15 250 50 0 empty empty open_file 17 7 0 10 -262144
+-1 -1;
+#X obj 133 153 bng 15 250 50 0 empty empty play/continue 17 7 0 10
+-262144 -1 -1;
+#X obj 150 170 bng 15 250 50 0 empty empty stop 17 7 0 10 -262144 -1
+-1;
+#X obj 167 187 bng 15 250 50 0 empty empty reset 17 7 0 10 -262144
+-1 -1;
+#X obj 243 153 vsl 25 60 0 1 0 0 empty empty Volume 0 -9 0 10 -262144
+-1 -1 400 1;
+#X obj 184 206 tgl 15 0 empty empty loop 17 7 0 10 -262144 -1 -1 1
+1;
+#X obj 40 184 loadbang;
+#X obj 311 352 s loopon;
+#X obj 291 262 sel 0 1;
+#X obj 310 291 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X msg 310 317 0;
+#X obj 255 353 s loopon;
+#X obj 254 292 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X msg 254 318 1;
+#X connect 2 0 1 0;
+#X connect 3 0 1 1;
+#X connect 4 0 1 2;
+#X connect 5 0 1 3;
+#X connect 6 0 1 4;
+#X connect 7 0 10 0;
+#X connect 8 0 7 0;
+#X connect 10 0 14 0;
+#X connect 10 1 11 0;
+#X connect 11 0 12 0;
+#X connect 12 0 9 0;
+#X connect 14 0 15 0;
+#X connect 15 0 13 0;
+#X coords 0 -1 1 1 200 150 1 100 100;

@@ -1,0 +1,32 @@
+#N canvas 269 478 450 456 10;
+#X obj 74 140 comport;
+#X msg 45 62 devicename /dev/ttymxc3;
+#X floatatom 73 168 5 0 0 0 - - -, f 5;
+#X obj 45 35 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
+-1;
+#X msg 100 104 ports;
+#X obj 138 189 print;
+#X msg 187 114 close;
+#X msg 188 86 open 9999;
+#X msg 215 55 devices;
+#X obj 57 321 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
+-1;
+#X obj 99 325 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+1;
+#X obj 74 224 < 70;
+#X obj 99 301 change;
+#X obj 74 250 sel 1 0;
+#X obj 219 278 hsl 80 30 40 250 0 0 empty empty empty -2 -8 0 10 -262144
+-1 -1 6470 1;
+#X connect 0 0 2 0;
+#X connect 1 0 0 0;
+#X connect 2 0 14 0;
+#X connect 3 0 1 0;
+#X connect 4 0 0 0;
+#X connect 6 0 0 0;
+#X connect 7 0 0 0;
+#X connect 8 0 0 0;
+#X connect 11 0 13 0;
+#X connect 12 0 10 0;
+#X connect 13 0 9 0;
+#X connect 13 0 12 0;

@@ -1,0 +1,67 @@
+#N canvas 467 234 654 549 10;
+#X obj 446 47 reverb;
+#X obj 447 341 edit_params;
+#X obj 447 365 stereo_player;
+#X obj 6 368 theremin;
+#N canvas 592 846 360 317 mixend 0;
+#X obj 101 101 cnv 15 100 150 empty empty Theremin 20 12 0 14 -261234
+-66577 0;
+#X obj 10 285 dac~;
+#X obj -52 129 catch~ L;
+#X obj 20 129 catch~ R;
+#X obj 13 190 *~;
+#X obj -61 188 *~;
+#X msg -49 89 1;
+#X msg 40 95 0;
+#X obj 34 66 r theroff;
+#X obj -72 62 r theron;
+#X obj 137 163 vsl 25 60 0 1 0 0 empty empty vol 0 -9 0 10 -262144
+-1 -1 1180 1;
+#X obj 43 234 *~;
+#X obj -31 232 *~;
+#X obj 211 78 loadbang;
+#X msg 211 110 0.2;
+#X connect 2 0 5 0;
+#X connect 3 0 4 0;
+#X connect 4 0 11 0;
+#X connect 5 0 12 0;
+#X connect 6 0 5 1;
+#X connect 6 0 4 1;
+#X connect 7 0 4 1;
+#X connect 7 0 5 1;
+#X connect 8 0 7 0;
+#X connect 9 0 6 0;
+#X connect 10 0 12 1;
+#X connect 10 0 11 1;
+#X connect 11 0 1 1;
+#X connect 12 0 1 0;
+#X connect 13 0 14 0;
+#X connect 14 0 10 0;
+#X coords 0 -1 1 1 100 150 1 100 100;
+#X restore 336 367 pd mixend;
+#X obj 5 46 modi_021;
+#X obj 335 301 overtone;
+#X obj 5 300 pitch_engine;
+#N canvas 104 194 450 300 title 0;
+#X obj 101 100 cnv 20 300 60 empty empty Smart_Theremin.021 20 30 0
+24 -191407 -66577 0;
+#X coords 0 -1 1 1 300 60 1 100 100;
+#X restore 174 -17 pd title;
+#N canvas 208 354 450 300 design 0;
+#X obj 101 100 cnv 15 160 60 empty empty designed_for_UDOO 10 30 0
+14 -262130 -66577 0;
+#X coords 0 -1 1 1 160 60 1 100 100;
+#X restore 5 -17 pd design;
+#N canvas 207 535 450 300 author 0;
+#X obj 100 100 cnv 15 160 60 empty empty by_r.nannetti 60 40 0 10 -262130
+-66577 0;
+#X coords 0 -1 1 1 160 60 1 100 100;
+#X restore 483 -18 pd author;
+#N canvas 206 696 450 300 verb_author 0;
+#X obj 101 101 cnv 15 200 30 empty empty verb_based_on_J.Dattorro_work
+20 15 0 10 -262130 -66577 0;
+#X coords 0 -1 1 1 200 30 1 100 100;
+#X restore 447 306 pd verb_author;
+#X obj 599 342 credits;
+#X connect 5 0 7 0;
+#X connect 5 1 7 1;

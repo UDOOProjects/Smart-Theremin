@@ -1,0 +1,63 @@
+#N canvas 400 520 808 645 10;
+#X obj 100 101 cnv 15 320 150 empty empty Theremin_Sensor 20 12 0 14
+-191407 -66577 0;
+#X msg 27 7 devices;
+#X msg 191 9 devicename /dev/ttymxc3;
+#X msg 97 8 open 9999;
+#X floatatom 73 81 5 0 0 0 - - -, f 5;
+#X obj 25 84 print;
+#X msg 381 10 close;
+#X obj 73 301 f;
+#X obj 126 178 hsl 255 30 0 255 0 0 empty empty empty -2 -8 0 10 -262144
+-1 -1 0 1;
+#X floatatom 73 274 5 0 0 0 - - -, f 5;
+#X obj 73 230 i;
+#X obj 77 498 s fdata;
+#X obj 381 282 r fdata;
+#X floatatom 346 215 5 0 0 0 - - -, f 5;
+#X obj 248 419 sel 1 0;
+#X obj 267 444 s theron;
+#X obj 248 470 s theroff;
+#X obj 252 387 |;
+#X floatatom 309 400 5 0 0 0 - - -, f 5;
+#X text 281 378 noise numeric filter;
+#X obj 128 160 hradio 17 1 0 7 empty empty empty 0 -8 0 10 -262144
+-1 -1 0;
+#X obj 249 160 hradio 17 1 0 8 empty empty empty 0 -8 0 10 -262144
+-1 -1 0;
+#X obj 180 126 bng 15 250 50 0 empty ch_col1 on 17 7 0 10 -262144 -166441
+-1;
+#X obj 282 126 bng 15 250 50 0 empty ch_col2 off 17 7 0 10 -62784 -166441
+-1;
+#X obj 162 500 outlet;
+#X obj 225 363 < 1;
+#X obj 204 299 t f f;
+#X obj 53 52 comport;
+#X obj 207 63 feed_onoff;
+#X obj 266 356 > 250;
+#X connect 1 0 27 0;
+#X connect 2 0 27 0;
+#X connect 3 0 27 0;
+#X connect 4 0 8 0;
+#X connect 6 0 27 0;
+#X connect 7 0 11 0;
+#X connect 7 0 24 0;
+#X connect 7 0 26 0;
+#X connect 8 0 10 0;
+#X connect 9 0 7 0;
+#X connect 10 0 9 0;
+#X connect 12 0 13 0;
+#X connect 14 0 16 0;
+#X connect 14 1 15 0;
+#X connect 17 0 14 0;
+#X connect 17 0 18 0;
+#X connect 22 0 28 0;
+#X connect 23 0 28 1;
+#X connect 25 0 17 0;
+#X connect 26 0 25 0;
+#X connect 26 1 29 0;
+#X connect 27 0 4 0;
+#X connect 28 0 2 0;
+#X connect 28 1 6 0;
+#X connect 29 0 17 1;
+#X coords 0 -1 1 1 320 150 1 100 100;

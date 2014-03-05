@@ -1,0 +1,32 @@
+#N canvas 143 117 450 510 10;
+#N canvas 648 138 450 435 parameters 0;
+#X obj 146 222 hsl 128 15 220.5 22050 1 0 param3 param3 damping -2
+-8 0 10 -262144 -1 -1 0 0;
+#X floatatom 278 220 10 0 0 0 - param3 damping, f 10;
+#X obj 146 253 hsl 128 15 0 1 0 0 param4 param4 decay -2 -8 0 10 -262144
+-1 -1 0 0;
+#X floatatom 278 251 10 0 0 0 - param4 decay, f 10;
+#X obj 146 158 hsl 128 15 0 250 0 0 param1 param1 predelay -2 -8 0
+10 -262144 -1 -1 0 0;
+#X floatatom 278 156 10 0 0 0 - param1 predelay, f 10;
+#X obj 146 190 hsl 128 15 220.5 22050 1 0 param2 param2 bandwidth -2
+-8 0 10 -262144 -1 -1 0 0;
+#X floatatom 278 188 10 0 0 0 - param2 bandwidth, f 10;
+#X obj 145 321 hsl 128 15 0 1 0 0 param6 param6 input_diffusion_2 -2
+-8 0 10 -262144 -1 -1 0 0;
+#X floatatom 277 319 10 0 0 0 - param6 input_diffusion2, f 10;
+#X obj 146 286 hsl 128 15 0 1 0 0 param5 param5 input_diffusion_1 -2
+-8 0 10 -262144 -1 -1 0 0;
+#X floatatom 278 284 10 0 0 0 - param5 input_diffusion1, f 10;
+#X obj 144 385 hsl 128 15 0 1 0 0 param8 param8 decay_diffusion_2 -2
+-8 0 10 -262144 -1 -1 0 0;
+#X floatatom 276 383 10 0 0 0 - param8 decay_diffusion2, f 10;
+#X obj 145 352 hsl 128 15 0 1 0 0 param7 param7 decay_diffusion_1 -2
+-8 0 10 -262144 -1 -1 0 0;
+#X floatatom 277 350 10 0 0 0 - param7 decay_diffusion1, f 10;
+#X obj 144 417 hsl 128 15 0 5 0 0 param9 param9 excursion -2 -8 0 10
+-262144 -1 -1 0 0;
+#X floatatom 276 415 10 0 0 0 - param9 excursion, f 10;
+#X coords 0 -1 1 1 280 360 1 100 100;
+#X restore 52 34 pd parameters;
+#X coords 0 510 1 509 250 400 0;
